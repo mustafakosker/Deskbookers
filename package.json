@@ -1,0 +1,19 @@
+{
+  "name": "deskbookers",
+  "version": "1.0.0",
+  "description": "Deskbookers frontend test application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mustafakosker/Deskbookers.git"
+  },
+  "author": "Mustafa Kosker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mustafakosker/Deskbookers/issues"
+  },
+  "homepage": "https://github.com/mustafakosker/Deskbookers#readme"
+}
