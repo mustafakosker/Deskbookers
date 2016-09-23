@@ -1,0 +1,21 @@
+.carousel-wrapper {
+  .carousel-image-container {
+    position: relative;
+
+    .carousel-image {
+      width: 100%;
+    }
+
+    .carousel-title {
+      position: absolute;
+
+      left: 0;
+      bottom: 30px;
+      width: 100%;
+      text-align: center;
+
+      color: white;
+      font-size: 128px;
+    }
+  }
+}
