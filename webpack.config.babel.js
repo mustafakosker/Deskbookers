@@ -36,7 +36,7 @@ const webpackConfig = {
     ]
   },
   eslint: {
-    configFile: '.eslintrc.json'
+    configFile: '.eslintrc'
   },
   watch: true,
   devServer: {
