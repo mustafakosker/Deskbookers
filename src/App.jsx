@@ -19,11 +19,9 @@ const carouselImages = [
 ];
 
 const App = () => (
-  <div>
-    <div className="carousel-container">
-      <NavigationBar title="Deskbookers" />
-      <Carousel images={carouselImages} />
-    </div>
+  <div className="carousel-container">
+    <NavigationBar title="Deskbookers" />
+    <Carousel images={carouselImages} />
   </div>
 );
 
