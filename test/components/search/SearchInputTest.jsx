@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { expect } from 'chai';
-import SearchInput from 'components/search/SearchInput.jsx';
+import SearchBar from 'components/search/SearchBar.jsx';
 
-describe('SearchInput component test', () => {
-  const wrapper = shallow(<SearchInput />);
+describe('SearchBar component test', () => {
+  const wrapper = shallow(<SearchBar />);
 
   it('renders .search-input-container', () => {
     expect(wrapper.find('.search-input-container')).to.have.length(1);
