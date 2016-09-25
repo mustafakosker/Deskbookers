@@ -62,7 +62,7 @@ export default class Carousel extends Component {
             }}
           >
             {this.props.images.map(image => (
-              <div className="carousel-image-container">
+              <div key={image.title} className="carousel-image-container">
                 <img src={image.url} className="carousel-image" role="presentation" />
                 <div className="carousel-title">{image.title}</div>
               </div>)

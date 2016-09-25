@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import ReduxThunk from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux';
 import NavigationBar from './components/navigation/NavigationBar.jsx';
 import Carousel from './components/carousel/Carousel.jsx';
-import SearchBar from './components/search/SearchBar.jsx';
+import SearchBarContainer from './components/search/SearchBarContainer.jsx';
+import search from './reducers/search/SearchReducer';
 
 const carouselImages = [
   {
@@ -19,13 +23,19 @@ const carouselImages = [
   }
 ];
 
+const store = createStore(search, applyMiddleware(ReduxThunk));
+
 const App = () => (
   <div className="carousel-container">
     <NavigationBar title="Deskbookers" />
     <Carousel images={carouselImages}>
-      <SearchBar />
+      <SearchBarContainer />
     </Carousel>
   </div>
 );
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root'));

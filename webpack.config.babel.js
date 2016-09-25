@@ -32,7 +32,8 @@ const webpackConfig = {
   resolve: {
     root: [
       path.resolve('./src'),
-      path.resolve('./src/components')
+      path.resolve('./src/components'),
+      path.resolve('./src/constants')
     ]
   },
   eslint: {

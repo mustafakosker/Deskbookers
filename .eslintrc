@@ -3,7 +3,9 @@
   "extends": "airbnb",
   "rules": {
     "comma-dangle": "off",
-    "jsx-a11y/no-static-element-interactions": "off"
+    "jsx-a11y/no-static-element-interactions": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off"
   },
   "globals": {
     "document": true,

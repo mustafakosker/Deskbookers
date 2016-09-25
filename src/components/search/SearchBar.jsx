@@ -1,17 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 export default class SearchBar extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      city: null
+      city: ''
     };
   }
 
   handleCityChange = event => this.setState({
     city: event.target.value
   });
+
+  handleSearchOnClick = () => {
+    if (this.state.city) {
+      this.props.search(this.state.city);
+    }
+  };
 
   render() {
     return (
@@ -23,8 +29,14 @@ export default class SearchBar extends Component {
           value={this.state.city}
           onChange={this.handleCityChange}
         />
-        <button className="search-button">Search</button>
+        <button className="search-button" onClick={this.handleSearchOnClick}>
+          Search
+        </button>
       </div>
     );
   }
 }
+
+SearchBar.propTypes = {
+  search: PropTypes.func.isRequired
+};

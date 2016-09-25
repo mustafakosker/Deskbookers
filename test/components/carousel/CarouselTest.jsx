@@ -4,9 +4,6 @@ import Carousel from 'components/carousel/Carousel.jsx';
 import { expect } from 'chai';
 
 describe('Carousel component test', () => {
-  global.window = {
-    innerWidth: '600px'
-  };
   const images = [
     {
       url: 'testurl:1234123',
