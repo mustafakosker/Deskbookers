@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import NavigationBar from './components/navigation/NavigationBar.jsx';
 import Carousel from './components/carousel/Carousel.jsx';
+import SearchInput from './components/search/SearchInput.jsx';
 
 const carouselImages = [
   {
@@ -21,7 +22,9 @@ const carouselImages = [
 const App = () => (
   <div className="carousel-container">
     <NavigationBar title="Deskbookers" />
-    <Carousel images={carouselImages} />
+    <Carousel images={carouselImages}>
+      <SearchInput />
+    </Carousel>
   </div>
 );
 

@@ -68,6 +68,7 @@ export default class Carousel extends Component {
               </div>)
             )}
           </div>
+          {this.props.children}
           <div
             className="right-arrow-icon"
             onClick={() => {
@@ -86,5 +87,6 @@ export default class Carousel extends Component {
 }
 
 Carousel.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.object)
+  images: PropTypes.arrayOf(PropTypes.object),
+  children: PropTypes.node
 };
