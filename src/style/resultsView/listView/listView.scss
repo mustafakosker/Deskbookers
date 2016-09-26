@@ -1,0 +1,45 @@
+.list-view-container {
+  $list-margin: 30px;
+  margin-top: $list-margin;
+
+  .results-title {
+    margin-left: $list-margin;
+    margin-right: $list-margin;
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #FF8C00;
+
+    .divider {
+      border: 0;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .result-item {
+    max-width: 320px;
+    display: inline-block;
+
+    margin-left: $list-margin;
+    margin-bottom: $list-margin;
+
+    .result-image-container {
+      position: relative;
+
+      .item-image {
+        width: 100%;
+      }
+
+      .hour-price {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+      }
+    }
+
+  }
+}
