@@ -15,7 +15,7 @@ export default class ListView extends Component {
             <div className="divider" />
           </div>
           {this.props.items.map(item => (
-            <div className="result-item">
+            <div className="result-item" key={item.name}>
               <div className="result-image-container">
                 <div className="result-image-wrapper">
                   <img src={item.imageUrl} className="item-image" role="presentation" />
