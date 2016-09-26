@@ -16,8 +16,8 @@ const App = props => (
   <div className="page-container">
     <LoadingBar isLoading={props.isLoading} />
     <div className={classNames('page-wrapper', props.isLoading, 'loading')}>
-      <NavigationBar title="Deskbookers" />
       <Carousel images={props.carouselImages}>
+        <NavigationBar />
         <SearchBar search={props.search} />
       </Carousel>
       <ListView items={props.items} />

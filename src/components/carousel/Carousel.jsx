@@ -45,16 +45,14 @@ export default class Carousel extends Component {
       <div className="carousel-wrapper">
         <div className="image-list-wrapper">
           <div
-            className="left-arrow-icon"
+            className="left-arrow-icon arrow-icon"
             onClick={() => {
               this.setState({
                 imageIndex: this.decreaseImageIndex(this.state.imageIndex, this.props.images.length)
               });
               this.resetInterval();
             }}
-          >
-            Left Arrow
-          </div>
+          />
           <div
             className="image-list" style={{
               left: this.state.imageIndex * -window.innerWidth,
@@ -70,16 +68,14 @@ export default class Carousel extends Component {
           </div>
           {this.props.children}
           <div
-            className="right-arrow-icon"
+            className="right-arrow-icon arrow-icon"
             onClick={() => {
               this.setState({
                 imageIndex: this.increaseImageIndex(this.state.imageIndex, this.props.images.length)
               });
               this.resetInterval();
             }}
-          >
-            Right Arrow
-          </div>
+          />
         </div>
       </div>
     );

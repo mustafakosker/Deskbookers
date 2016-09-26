@@ -8,19 +8,59 @@
     white-space: nowrap;
     position: relative;
 
-    .left-arrow-icon, .right-arrow-icon {
+    .navigation-bar-container {
       position: absolute;
-      top: 50%;
+      top: 0px;
 
-      z-index: 10;
+      max-height: 80px;
+      width: 100%;
+
+      .navigation-bar-icon {
+        height: 25px;
+        width: 100%;
+        margin-bottom: 5px;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('../icons/app-logo.png');
+      }
+
+      background-color: white;
     }
 
-    .left-arrow-icon {
-      left: 30px;
-    }
+    .arrow-icon {
+      width: 50px;
+      height: 50px;
 
-    .right-arrow-icon {
-      right: 30px;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0.5;
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+
+
+      &.left-arrow-icon, &.right-arrow-icon {
+        position: absolute;
+        top: 50%;
+
+        z-index: 10;
+      }
+
+      &.left-arrow-icon {
+        left: 30px;
+
+        background-size: 100%;
+        background-image: url('../icons/left-arrow-icon.png');
+      }
+
+      &.right-arrow-icon {
+        right: 30px;
+
+        background-size: 100%;
+        background-image: url('../icons/right-arrow-icon.png');
+      }
     }
 
     .image-list {

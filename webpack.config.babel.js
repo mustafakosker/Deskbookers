@@ -26,6 +26,10 @@ const webpackConfig = {
       {
         test: /\.scss$/,
         loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+      },
+      {
+        test: /\.png$/,
+        loader: 'url-loader?limit=5000'
       }
     ]
   },
