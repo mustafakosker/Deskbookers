@@ -40,7 +40,7 @@ export default function searchByCity() {
           row.location_name && row.rating && row.hour_price).map(row => ({
             name: row.name,
             locationName: row.location_name,
-            rating: row.rating,
+            rating: Math.round(row.rating / 2),
             hourPrice: row.hour_price,
             imageUrl: row.image_urls[0]
           }));

@@ -23,26 +23,33 @@
   .result-item {
     max-width: 320px;
     display: inline-block;
-    
+
     font-family: sans-serif;
     font-size: 14px;
 
     margin-left: $list-margin;
     margin-bottom: $list-margin;
 
+    .name {
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
     .result-image-container {
-      position: relative;
+      .result-image-wrapper {
+        position: relative;
 
-      .item-image {
-        width: 100%;
-      }
+        .item-image {
+          width: 100%;
+        }
 
-      .hour-price {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
+        .hour-price {
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
 
-        color: white;
+          color: white;
+        }
       }
     }
 
