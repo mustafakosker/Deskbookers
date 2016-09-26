@@ -6,6 +6,8 @@ import { createStore, applyMiddleware } from 'redux';
 import NavigationBar from './components/navigation/NavigationBar.jsx';
 import Carousel from './components/carousel/Carousel.jsx';
 import SearchBarContainer from './components/search/SearchBarContainer.jsx';
+import ListViewContainer from './components/resultsView/listView/ListViewContainer';
+import LoadingBar from './components/loadingBar/LoadingBar.jsx';
 import search from './reducers/search/SearchReducer';
 
 const carouselImages = [
@@ -26,11 +28,13 @@ const carouselImages = [
 const store = createStore(search, applyMiddleware(ReduxThunk));
 
 const App = () => (
-  <div className="carousel-container">
+  <div className="page-container">
+    <LoadingBar />
     <NavigationBar title="Deskbookers" />
     <Carousel images={carouselImages}>
       <SearchBarContainer />
     </Carousel>
+    <ListViewContainer />
   </div>
 );
 
