@@ -53,5 +53,25 @@
       }
     }
 
+    .location-name-container {
+      .location-name, .location-icon-image {
+        display: inline-block;
+      }
+
+      .location-icon-image {
+        $icon-image-size: 15px;
+
+        width: $icon-image-size;
+        height: $icon-image-size;
+        margin-right: 5px;
+
+        background-size: contain;
+        background-image: url('../icons/location-icon.png');
+      }
+
+      .location-name {
+        vertical-align: top;
+      }
+    }
   }
 }

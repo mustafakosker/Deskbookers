@@ -23,8 +23,11 @@ const ListView = props => (
           <div className="name">
             {item.name}
           </div>
-          <div className="location-name">
-            {item.locationName}
+          <div className="location-name-container">
+            <div className="location-icon-image" />
+            <div className="location-name">
+              {item.locationName}
+            </div>
           </div>
         </div>
       ))}
