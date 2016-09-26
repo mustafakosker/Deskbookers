@@ -10,15 +10,18 @@ import ListView from './components/resultsView/listView/ListView.jsx';
 import LoadingBar from './components/loadingBar/LoadingBar.jsx';
 import searchByCity from './actionCreators/search/SearchActionCreators';
 import search from './reducers/search/SearchReducer';
+import { classNames } from './util/componentUtil';
 
 const App = props => (
   <div className="page-container">
     <LoadingBar isLoading={props.isLoading} />
-    <NavigationBar title="Deskbookers" />
-    <Carousel images={props.carouselImages}>
-      <SearchBar search={props.search} />
-    </Carousel>
-    <ListView items={props.items} />
+    <div className={classNames('page-wrapper', props.isLoading, 'loading')}>
+      <NavigationBar title="Deskbookers" />
+      <Carousel images={props.carouselImages}>
+        <SearchBar search={props.search} />
+      </Carousel>
+      <ListView items={props.items} />
+    </div>
   </div>
 );
 

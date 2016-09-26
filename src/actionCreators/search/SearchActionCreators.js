@@ -33,7 +33,7 @@ export default function searchByCity() {
   return (dispatch) => {
     dispatch(showLoading());
 
-    axios.get(searchUrl)
+    return axios.get(searchUrl)
       .then((response) => {
         const results = response.data.rows.filter(row =>
           row.name && row.image_urls && row.image_urls.length > 0 &&
