@@ -19,7 +19,7 @@ describe('SearchActionCreators unit test', () => {
       });
 
     return store.dispatch(searchByCity()).then(() => {
-      const action = store.getActions()[0];
+      const action = store.getActions()[2];
 
       expect(action.type).to.equal(actionTypes.SEARCH_SUCCESS);
       expect(action.results.length).to.equal(0);
@@ -43,13 +43,13 @@ describe('SearchActionCreators unit test', () => {
     const store = mockStore({});
 
     return store.dispatch(searchByCity()).then(() => {
-      const action = store.getActions()[0];
+      const action = store.getActions()[2];
       const result = action.results[0];
 
       expect(action.type).to.equal(actionTypes.SEARCH_SUCCESS);
       expect(result.name).to.equal(row.name);
       expect(result.locationName).to.equal(row.location_name);
-      expect(result.rating).to.equal(row.rating);
+      expect(result.rating).to.equal(Math.round(row.rating / 2));
       expect(result.hourPrice).to.equal(row.hour_price);
       expect(result.imageUrl).to.equal(row.image_urls[0]);
     });
@@ -63,7 +63,7 @@ describe('SearchActionCreators unit test', () => {
     const store = mockStore({});
 
     return store.dispatch(searchByCity()).then(() => {
-      const action = store.getActions()[0];
+      const action = store.getActions()[2];
 
       expect(action.type).to.equal(actionTypes.SEARCH_FAILED);
     });
